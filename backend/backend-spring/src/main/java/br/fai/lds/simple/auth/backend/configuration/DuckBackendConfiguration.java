@@ -1,6 +1,6 @@
 package br.fai.lds.simple.auth.backend.configuration;
 
-import br.fai.lds.backend.usecases.randomduck.RandomDuckUseCase;
+import br.fai.lds.backend.usecases.duck.RandomDuckUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

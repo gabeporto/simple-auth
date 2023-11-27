@@ -1,6 +1,6 @@
 package br.fai.lds.simple.auth.backend.restcontroller;
 
-import br.fai.lds.domain.dto.RandomDuckDto;
+import br.fai.lds.domain.dto.DuckDto;
 import br.fai.lds.simple.auth.backend.configuration.DuckBackendConfiguration;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +18,7 @@ public class DuckRestController {
 
 
     @GetMapping("/random")
-    public RandomDuckDto getRandomDuck() {
+    public DuckDto getRandomDuck() {
         return duckBackendConfiguration.randomDuckUseCase().getRandomDuck();
     }
 }

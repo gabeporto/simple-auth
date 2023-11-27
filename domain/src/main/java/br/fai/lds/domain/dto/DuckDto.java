@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class RandomDuckDto {
+public class DuckDto {
 
     private String url;
     private String message;

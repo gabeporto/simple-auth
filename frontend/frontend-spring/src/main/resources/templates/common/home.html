@@ -8,6 +8,12 @@
         <p>Usuário Autenticado!</p>
 
         <p>
+            <img th:if="${duck} != null" th:src="${duck.url}">
+        </p>
+
+        <p th:if="${duck} != null" th:text="${duck.message}"></p>
+
+        <p>
             <a th:href="@{/logout}">
                 <i class="icon-unlock"></i>
                 Deslogar

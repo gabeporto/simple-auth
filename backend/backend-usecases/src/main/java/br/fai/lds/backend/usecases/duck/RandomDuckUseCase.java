@@ -1,15 +1,15 @@
-package br.fai.lds.backend.usecases.randomduck;
+package br.fai.lds.backend.usecases.duck;
 
-import br.fai.lds.domain.dto.RandomDuckDto;
+import br.fai.lds.domain.dto.DuckDto;
 import org.springframework.web.client.RestTemplate;
 
 public class RandomDuckUseCase {
     private String externalApiUrl = "https://random-d.uk/api/v2";
-    public RandomDuckDto getRandomDuck() {
+    public DuckDto getRandomDuck() {
         String apiUrl = externalApiUrl + "/random";
 
         RestTemplate restTemplate = new RestTemplate();
-        RandomDuckDto randomDuck = restTemplate.getForObject(apiUrl, RandomDuckDto.class);
+        DuckDto randomDuck = restTemplate.getForObject(apiUrl, DuckDto.class);
 
         return randomDuck;
     }
