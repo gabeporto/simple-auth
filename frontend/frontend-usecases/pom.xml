@@ -7,20 +7,23 @@
         <groupId>br.fai.lds</groupId>
         <artifactId>simple-auth</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>frontend</artifactId>
-
-    <packaging>pom</packaging>
-    <modules>
-        <module>frontend-spring</module>
-        <module>frontend-usecases</module>
-    </modules>
+    <artifactId>frontend-usecases</artifactId>
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>br.fai.lds</groupId>
+            <artifactId>domain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

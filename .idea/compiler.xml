@@ -7,8 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="backend-spring" />
         <module name="frontend-spring" />
+        <module name="frontend-usecases" />
+        <module name="backend-spring" />
         <module name="domain" />
       </profile>
     </annotationProcessing>
