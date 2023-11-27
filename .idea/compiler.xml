@@ -9,6 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="frontend-spring" />
         <module name="frontend-usecases" />
+        <module name="backend-implementation" />
+        <module name="backend-usecases" />
         <module name="backend-spring" />
         <module name="domain" />
       </profile>
