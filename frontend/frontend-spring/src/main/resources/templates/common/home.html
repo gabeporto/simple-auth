@@ -1,23 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html layout:decorate="~{layout}" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
-        <title>Home</title>
+        <title>AdvisorDuck - Home</title>
+
+        <style>
+            .custom-img {
+                max-width: 600px;
+                max-height: 600px;
+                object-fit: cover;
+                border-radius: 5%;
+            }
+        </style>
     </head>
-    <body>
-        <p>Usuário Autenticado!</p>
 
-        <p>
-            <img th:if="${duck} != null" th:src="${duck.url}">
-        </p>
+    <div layout:fragment="body" class="text-center">
+        <div class="app-auth-body card p-4">
+            <h1 class="mt-2 mb-5">Your Advisor Duck says:</h1>
 
-        <p th:if="${duck} != null" th:text="${duck.message}"></p>
+            <div class="mb-4">
+                <img class="custom-img" th:if="${duck} != null" th:src="${duck.url}">
+            </div>
 
-        <p>
-            <a th:href="@{/logout}">
-                <i class="icon-unlock"></i>
-                Deslogar
-            </a>
-        </p>
-    </body>
+            <h3 th:if="${duck} != null" th:text="${duck.message}"></h3>
+
+            <div class="d-flex justify-content-center mt-5">
+                <div class="p-2">
+                    <a class="btn btn-warning" th:href="@{/home}">
+                        Generate New
+                    </a>
+                </div>
+
+                <div class="p-2">
+                    <a class="btn btn-danger" th:href="@{/logout}">
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </html>

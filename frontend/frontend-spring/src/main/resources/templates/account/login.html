@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html layout:decorate="~{layout}" xmlns="http://www.w3.org/1999/html">
 
     <head>
         <meta charset="UTF-8">
-        <title>Login</title>
+        <title>AdvisorDuck - Login</title>
     </head>
 
-    <body layout:fragment="body">
+    <div layout:fragment="body">
 
-        <div class="container padding-bottom-3x mb-2 mt-5">
-            <div class="row">
-                <div class="col-md-6">
-                    <form class="login-box" method="post" th:action="@{/authentication}">
-                        <div class="form-group input-group">
-                            <input class="form-control" th:name="email" type="email" placeholder="Email" required="">
-                            <span class="input-group-addon">
-                            <i class="icon-mail"></i>
-                        </span>
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+                <div class="col-12 col-md-8 col-lg-6 auth-main-col text-center p-5">
+                    <div class="app-auth-body card p-4">
+                        <div class="app-auth-branding mb-4">
+                            <img class="logo-icon me-2" src="images/duck.png" alt="logo" style="width: 150px;">
                         </div>
-                        <div class="form-group input-group">
-                            <input class="form-control" th:name="password" type="password" placeholder="Password" required="">
-                            <span class="input-group-addon">
-                            <i class="icon-lock"></i>
-                        </span>
+                        <h2 class="auth-heading text-center mb-5">Log into AdvisorDuck</h2>
+                        <div class="auth-form-container text-start">
+                            <form class="login-box" method="post" th:action="@{/authentication}">
+                                <div class="email mb-3">
+                                    <label class="sr-only">Email</label>
+                                    <input id="email" name="email" class="form-control signin-email" placeholder="Email" required="required">
+                                </div>
+                                <div class="password mb-3">
+                                    <label class="sr-only">Password</label>
+                                    <input id="password" name="password" type="password" class="form-control signin-password" placeholder="Password" required="required">
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-warning">Efetuar login</button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="text-center text-sm-right">
-                            <button class="btn btn-primary margin-bottom-none" type="submit">Login</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
 
-    </body>
+    </div>
 
 </html>
