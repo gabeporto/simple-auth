@@ -26,6 +26,11 @@
                                     <label class="sr-only">Password</label>
                                     <input id="password" name="password" type="password" class="form-control signin-password" placeholder="Password" required="required">
                                 </div>
+                                <div>
+                                    <p class="alert alert-danger text-center"
+                                       th:text="${loginErrorMessage}"
+                                       th:if="${loginErrorMessage != null}"></p>
+                                </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-warning">Login!</button>
                                 </div>
