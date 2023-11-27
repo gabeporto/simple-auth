@@ -20,7 +20,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/account/login")
+                .loginPage("/login")
                 .usernameParameter("email")
                 .loginProcessingUrl("/authentication")
                 .defaultSuccessUrl("/home")
@@ -30,7 +30,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
                     final FlashMapManager flashMapManager = new SessionFlashMapManager();
                     flashMapManager.saveOutputFlashMap(flashMap, request, response);
-                    response.sendRedirect("/account/login");
+                    response.sendRedirect("/login");
                 })
                 .and()
                 .logout()
