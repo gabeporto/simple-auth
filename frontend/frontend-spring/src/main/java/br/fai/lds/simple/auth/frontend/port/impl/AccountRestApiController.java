@@ -25,7 +25,7 @@ public class AccountRestApiController implements AccountRestService {
 
             final HttpEntity<String> httpEntity = new HttpEntity<>(httpHeaders);
 
-            final String endpoint = "http://localhost:8081/api/authentication/v1/login";
+            final String endpoint = "http://localhost:8081/api/authentication/login";
 
             ResponseEntity<UserModel> responseEntity = restTemplate.exchange(
                     endpoint,

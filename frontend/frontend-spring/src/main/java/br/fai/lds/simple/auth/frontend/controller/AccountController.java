@@ -12,12 +12,4 @@ public class AccountController {
     public String getLoginPage() {
         return "account/login";
     }
-
-    @PostMapping("/authenticate")
-    public String authenticateUser(@RequestParam("email") final String email,
-                                   @RequestParam("password") final String password) {
-
-        System.out.println(email + password);
-        return "redirect:login";
-    }
 }

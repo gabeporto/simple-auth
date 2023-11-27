@@ -17,7 +17,7 @@ public class AccountUseCase {
             return null;
         }
 
-        if(password == null || password.length() < 4) {
+        if(password == null || password.length() < 2) {
             return null;
         }
 
